@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000;
     --foreground: #ededed;
   }
 }
@@ -17,5 +17,24 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  @keyframes smoothNeonPulse {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 5px rgb(255, 255, 255))
+        drop-shadow(0 0 10px rgb(255, 255, 255));
+      opacity: 0.92;
+    }
+    50% {
+      filter: drop-shadow(0 0 8px rgb(255, 255, 255))
+        drop-shadow(0 0 20px rgb(255, 255, 255));
+      opacity: 1;
+    }
+  }
+
+  .neon-effect {
+    animation: smoothNeonPulse 9s infinite ease-in-out;
+  }
 }

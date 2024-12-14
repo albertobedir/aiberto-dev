@@ -8,6 +8,13 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        "swiss-bold-italic": ["var(--font-swiss-bold-italic)"],
+        "swiss-bold": ["var(--font-swiss-bold)"],
+        "swiss-italic": ["var(--font-swiss-italic)"],
+        "swiss-medium": ["var(--font-swiss-medium)"],
+        "swiss-regular": ["var(--font-swiss-regular)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
